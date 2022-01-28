@@ -7,11 +7,8 @@
 {% for sight in all_sights %}
 <div class="country">
     <a href="/sights/{{sight.id}}">{{ sight.sight_name }}</a>
-    , <a  href="/countries/{{sight.country.id}}">{{ sight.country.country_name }}</a>
+    <a  href="/countries/{{sight.country.id}}">{{ sight.country.country_name }}</a>
 
-    <!-- <div class="visited">
-        {{ sight.visited }}
-    </div> -->
 
     <div class="buttons">
 

@@ -1,4 +1,28 @@
 {% extends "base.html" %}
 {% block content %} 
 
+<div class="all_lists">
+    <div class="country_list">
+        <h2>Countries</h2>
+    {% for country in all_countries %}
+    {% if country.visited == False %}
+            <a href="/countries/{{country.id}}">{{ country.country_name }}</a>
+    {% endif %}
+    {% endfor %}
+    </div>
+    
+    <div class="sight_list">
+        <h2>Sights</h2>
+    {% for sight in all_sights %}
+    {% if sight.visited == False %}
+    
+    
+            <a href="/sights/{{sight.id}}">{{ sight.sight_name }}</a>
+    
+    {% endif %}
+    {% endfor %}
+    </div>
+    
+    </div>
+
 {% endblock %}
