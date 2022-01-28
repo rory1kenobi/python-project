@@ -5,8 +5,8 @@ from models.country import Country
 import repositories.sight_repository as sight_repository
 import repositories.country_repository as country_repository
 
-# sight_repository.delete_all()
-# country_repository.delete_all()
+sight_repository.delete_all()
+country_repository.delete_all()
 
 country1 = Country("Scotland", "Europe", True)
 country_repository.save(country1)
