@@ -1,4 +1,4 @@
--- DROP TABLE IF EXISTS sights;
+DROP TABLE IF EXISTS sights;
 DROP TABLE IF EXISTS countries;
 
 CREATE TABLE countries (
@@ -8,10 +8,10 @@ CREATE TABLE countries (
     visited BOOLEAN
 );
 
--- CREATE TABLE sights (
---     id SERIAL PRIMARY KEY,
---     sight_name VARCHAR(255),
---     description TEXT,
---     visited BOOLEAN,
---     country_id INT REFERENCES country(id) ON DELETE CASCADE
--- );
+CREATE TABLE sights (
+    id SERIAL PRIMARY KEY,
+    sight_name VARCHAR(255),
+    description TEXT,
+    visited BOOLEAN,
+    country_id INT REFERENCES countries(id) ON DELETE CASCADE
+);
