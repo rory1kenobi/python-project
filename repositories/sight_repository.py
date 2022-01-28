@@ -22,7 +22,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        country = country_repository.select(row['city_id'])
+        country = country_repository.select(row['country_id'])
         sight = Sight(row['sight_name'], country, row['description'], row['visited'], row['id'])
         sights.append(sight)
     return sights
@@ -35,7 +35,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = country_repository.select(result['city_id'])
+        country = country_repository.select(result['country_id'])
         sight = Sight(result['sight_name'], country, result['description'], result['visited'], result['id'])
     return sight
 
