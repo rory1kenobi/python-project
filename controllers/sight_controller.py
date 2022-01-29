@@ -29,9 +29,8 @@ def create_sight():
 
 @sight_blueprint.route("/sights/<id>")
 def show_sight(id):
-    country = country_repository.select(id)
     sight = sight_repository.select(id)
-    return render_template('sights/show.html', contry=country, sight=sight)
+    return render_template('sights/show.html', sight=sight)
 
 @sight_blueprint.route("/sights/<id>/edit", methods=['GET'])
 def edit_sight(id):
