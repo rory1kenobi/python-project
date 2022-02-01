@@ -11,17 +11,18 @@
 </head>
 <body>
   <header>
-      <h2 class="logo">RSmith</h2>
+    <h2 class="logo">RSMITH</h2>
       <div class="menu">
         <ul>
           <li><a href="/">HOME</a></li>
           <li><a href="/countries">COUNTRY</a></li>
           <li><a href="/sights">SIGHT</a></li>
-          <li><a href="/visited">VISIT</a></li>
+          <li><a href="/visited">VISITED</a></li>
           <li><a href="/bucket_list">BUCKETLIST</a></li>
         </ul>
       </div>
   </header>
+  
   
   <div class="container">
     {% block content %}
@@ -29,5 +30,13 @@
 
     {% endblock %}
   </div>
+
+  <section class="showcase">
+
+    <video src="/static/images/explore.mp4" width="320" height="240" muted loop autoplay></video>
+
+    <div class="overlay"></div>
+
+  </section>
 </body>
 </html>

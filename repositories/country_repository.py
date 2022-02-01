@@ -53,7 +53,7 @@ def update(country):
     run_sql(sql, values)
 
 
-def cities(country):
+def sight(country):
     sights = []
 
     sql = "SELECT * FROM sights WHERE country_id = %s"

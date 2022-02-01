@@ -7,22 +7,14 @@
     <p>{{ sight.sight_name }}</p>
     <p>{{ sight.description }}</p>
     <p>Visited?
-    {% if sight.visited == True %}
+{% if sight.visited == True %}
     <i class="fa fa-check fa-1x" style="color:green" aria-hidden="true"></i>
 {% else %}
     <i class="fa fa-times fa-1x" style="color:red" aria-hidden="true"></i>
 {% endif %}</p>
     <p><a href="/sights/{{ sight.id }}/edit">Edit</a></p>
     
-    
-
-    <!-- {% for sight in all_sights %}
-<div class="country">
-    <a href="/sights/{{ sight.id }}">{{ sight.sight_name }}</a>
-    {{ sight.city.city_name }}
-</div>
-
-{% endfor %} -->
+</div>  
 
 
 

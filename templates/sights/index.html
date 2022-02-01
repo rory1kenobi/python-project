@@ -2,32 +2,36 @@
 {% block content %} 
 
 <div id="remove-bullet">
-    <li><a href="/sights/new">Add a sight</a></li>
-</div>
-{% for sight in all_sights %}
-<div class="country">
-    <a href="/sights/{{sight.id}}">{{ sight.sight_name }}</a>
-    <a  href="/countries/{{sight.country.id}}">{{ sight.country.country_name }}</a>
-
-
-    <div class="buttons">
-
-        <p>Visited?</p>
-
-    {% if sight.visited == True %}
-        <i class="fa fa-check fa-1x" style="color:green" aria-hidden="true"></i>
-    {% else %}
-        <i class="fa fa-times fa-1x" aria-hidden="true"></i>
-    {% endif %}
-
-
-        <form class="delete-form" action="/sights/{{sight.id}}/delete" method="POST">
-        <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
-        </form>
-    </div>
-
+   <button><li><a href="/sights/new">Add a sight</a></li></button>
 </div>
 
-{% endfor %} 
+<div class="sight_container">
+    {% for sight in all_sights %}
+        <div class="country">
+            <a href="/sights/{{sight.id}}">{{ sight.sight_name }}</a>
+            <a  href="/countries/{{sight.country.id}}">{{ sight.country.country_name }}</a>
+
+
+            <div class="buttons">
+
+                <p>Visited?</p>
+
+            {% if sight.visited == True %}
+                <i class="fa fa-check fa-1x" style="color:green" aria-hidden="true"></i>
+            {% else %}
+                <i class="fa fa-times fa-1x" aria-hidden="true"></i>
+            {% endif %}
+
+
+                <form class="delete-form" action="/sights/{{sight.id}}/delete" method="POST">
+                    <button class="trash-button"><i class="fa fa-trash-o fa-2x" style="color:red" aria-hidden="true"></i></button>
+                </form>
+            </div>
+
+        </div>
+
+    {% endfor %} 
+
+</div>
 
 {% endblock %}

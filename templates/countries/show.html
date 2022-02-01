@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %} 
 
+
 <div class="info">
     <h2>{{ country.continent }}</h2>
     <hr>
@@ -13,19 +14,12 @@
     {% endif %}</p>
     <p><a href="/countries/{{ country.id }}/edit">Edit</a></p>
     <hr>
+</div>
     
 
-    {% for city in all_cities %}
+    {% for sight in all_sights %}
 <div class="country">
-    <a href="/cities/{{ city.id }}">{{ city.city_name }}</a>
-    <!-- <img src="{{ city.img_url }}>" -->
-    <!-- {{ city.country.country_name }} -->
-
-    <div class="visited">
-        <!-- {{ city.visited }} -->
-    </div>
-
-    
+    <a href="/sights/{{ sight.id }}">{{ sight.sight_name }}</a>
 
 </div>
 
