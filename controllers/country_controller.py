@@ -3,6 +3,7 @@ from flask import Blueprint
 from models.country import Country
 import repositories.country_repository as country_repository
 import repositories.sight_repository as sight_repository
+import pdb
 
 country_blueprint = Blueprint("countries", __name__)
 

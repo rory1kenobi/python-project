@@ -1,3 +1,4 @@
+import pdb
 from db.run_sql import run_sql
 
 from models.country import Country
@@ -59,8 +60,9 @@ def sight(country):
     sql = "SELECT * FROM sights WHERE country_id = %s"
     values = [country.id]
     results = run_sql(sql, values)
+  
 
     for row in results:
-        sight = Sight(row['sight_name'], country, row['visited'], row['id'])
+        sight = Sight(row['sight_name'], country, row['description'], row['visited'], row['id'])
         sights.append(sight)
     return sights
