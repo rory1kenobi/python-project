@@ -17,7 +17,7 @@ def save(country):
 def select_all():
     countries = []
 
-    sql = "SELECT * FROM countries"
+    sql = "SELECT * FROM countries ORDER by country_name ASC"
     results = run_sql(sql)
 
     for row in results:

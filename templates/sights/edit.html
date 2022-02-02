@@ -2,7 +2,7 @@
 {% block content %} 
 
 
-<form action="/sights/{{sight.id}}" method="post">
+<form action="/sights/{{sight.id}}" method="POST">
     <div>
         <label for="sight_name">Name of sights: </label>
         <input type="text" id="sight_name" name="sight_name" value="{{sight.sight_name}}" required autofocus>

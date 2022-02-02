@@ -5,15 +5,30 @@ body{
 
   }
 
-  .country {
+.country {
     border: 5px solid white;
     width: 30%;
     min-height: 68px;
     padding: 10px;
     line-height: 18px;
     margin-bottom: 10px;
-    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);;
-  }
+    background-size: cover;
+    /* background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%); */
+}
+
+
+}
+
+  /* .continent-image {
+    background: url("./static/images/{{country.continent}}.jpeg");
+    height: auto;
+    width: 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 20px;
+    padding:5px;
+  } */
 
   .content {
     display: flexbox;
@@ -23,7 +38,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    /* background-color: rgb(255, 255, 255, 0.5); */
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 25%;
     justify-content: center;
     align-items: center;
@@ -31,16 +46,18 @@ body{
     
   }
   .all_lists {
-    /* background-color: rgb(255, 255, 255, 0.5); */
+    background-color: rgb(255, 255, 255, 0.5);
     width: 80vw;
     position: center;
     justify-content: space-evenly;
+    margin: auto;
+    width: auto;
   }
 
   .country_list {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(255, 255, 255, 0.5); */
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 10px;
     text-align: center;
     
@@ -49,7 +66,7 @@ body{
   .sight_list {
     display: flex;
     flex-direction: column;
-    /* background-color: rgb(255, 255, 255, 0.5); */
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 10px;
     text-align: center;
 
@@ -236,4 +253,7 @@ ul li a:hover{
     background: #111;
 }
 
+.info {
+    background-color: rgb(255, 255, 255, 0.5);
+}
 

@@ -40,12 +40,12 @@ def edit_sight(id):
 
 @sight_blueprint.route("/sights/<id>", methods=['POST'])
 def update_sight(id):
-    name = request.form['sight_name']
-    country_id = request.form['country_id']
+    sight_name = request.form['sight_name']
+    # country_id = request.form['country_id']
+    country = country_repository.select(request.form['country_id'])
     description = request.form['description']
     visited = request.form['visited']
-    country = country_repository.select(country_id)
-    sight = Sight(name, country, description, visited)
+    sight = Sight(sight_name, country, description, visited)
     sight_repository.update(sight)
     return redirect('/sights')
 
