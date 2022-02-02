@@ -45,7 +45,7 @@ def update_sight(id):
     country = country_repository.select(request.form['country_id'])
     description = request.form['description']
     visited = request.form['visited']
-    sight = Sight(sight_name, country, description, visited)
+    sight = Sight(sight_name, country, description, visited, id)
     sight_repository.update(sight)
     return redirect('/sights')
 

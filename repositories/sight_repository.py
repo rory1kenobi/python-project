@@ -18,7 +18,7 @@ def save(sight):
 def select_all():
     sights = []
 
-    sql = "SELECT * FROM sights"
+    sql = "SELECT * FROM sights ORDER by sight_name ASC"
     results = run_sql(sql)
 
     for row in results:
@@ -52,6 +52,6 @@ def delete(id):
 
 
 def update(sight):
-    sql = "UPDATE sights SET (sight_name, country_id, description, visited) = (%s, %s, %s) WHERE id = %s"
+    sql = "UPDATE sights SET (sight_name, country_id, description, visited) = (%s, %s, %s, %s) WHERE id = %s"
     values = [sight.sight_name, sight.country.id, sight.description, sight.visited, sight.id]
     run_sql(sql, values)
